@@ -33,7 +33,6 @@ DROP TABLE IF EXISTS Proveedor;
 DROP TABLE IF EXISTS Solicitud_de_mantenimiento;
 DROP TABLE IF EXISTS Equipo;
 DROP TABLE IF EXISTS CMMS;
-DROP TABLE IF EXISTS Administrador_comercial;
 DROP TABLE IF EXISTS Almacenero;
 DROP TABLE IF EXISTS Jefe_de_almacen;
 DROP TABLE IF EXISTS Administrador;
@@ -258,15 +257,6 @@ CREATE TABLE Almacenero
   PRIMARY KEY (ID_empleado),
   FOREIGN KEY (ID_empleado) REFERENCES Empleado(ID_empleado),
   UNIQUE (ID_almacenero)
-);
-
-CREATE TABLE Administrador_comercial
-(
-  ID_administrador_comercial CHAR(6) NOT NULL,
-  ID_empleado CHAR(6) NOT NULL,
-  PRIMARY KEY (ID_empleado),
-  FOREIGN KEY (ID_empleado) REFERENCES Empleado(ID_empleado),
-  UNIQUE (ID_administrador_comercial)
 );
 
 CREATE TABLE CMMS
@@ -535,7 +525,7 @@ CREATE TABLE Revision_tecnica
   ID_invitacion CHAR(6) NOT NULL,
   ID_informe_stock CHAR(6) NOT NULL,
   PRIMARY KEY (ID_revision_tecnica),
-  FOREIGN KEY (ID_empleado) REFERENCES Administrador_comercial(ID_empleado),
+  FOREIGN KEY (ID_empleado) REFERENCES Empleado(ID_empleado),
   FOREIGN KEY (ID_invitacion) REFERENCES Invitacion(ID_invitacion),
   FOREIGN KEY (ID_informe_stock) REFERENCES Informe_stock(ID_informe_stock)
 );
@@ -558,7 +548,7 @@ CREATE TABLE Presentacion_propuesta
   ID_revision_tecnica CHAR(6) NOT NULL,
   ID_cliente CHAR(6) NOT NULL,
   PRIMARY KEY (ID_presentacion_propuesta),
-  FOREIGN KEY (ID_empleado) REFERENCES Administrador_comercial(ID_empleado),
+  FOREIGN KEY (ID_empleado) REFERENCES Empleado(ID_empleado),
   FOREIGN KEY (ID_revision_tecnica) REFERENCES Revision_tecnica(ID_revision_tecnica),
   FOREIGN KEY (ID_cliente) REFERENCES Cliente(ID_cliente)
 );
