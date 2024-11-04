@@ -151,9 +151,6 @@ INSERT INTO Jefe_de_almacen (ID_jefe_almacen, Almacen_asignado, ID_empleado) VAL
 INSERT INTO Almacenero (ID_almacenero, Almacen_asignado, ID_empleado) VALUES
 ('AL0001', 1, 'E01008');
 
-INSERT INTO Administrador_comercial (ID_administrador_comercial, ID_empleado) VALUES
-('AC001', 'E01004');
-
 INSERT INTO CMMS (ID_CMMS, version, Fecha_instalacion, ID_cronograma) VALUES
 ('CM0001', 'v1.0', '2023-01-01', 'C00101'),
 ('CM0002', 'v1.1', '2023-02-01', 'C00102'),
