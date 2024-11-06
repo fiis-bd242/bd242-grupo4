@@ -55,7 +55,7 @@ INSERT INTO Revision_tecnica (
     ID_informe_stock
 ) 
 VALUES 
-    ('RT0100', 'Aceptado', (SELECT e.ID_empleado FROM empleado e WHERE e.tipo_empleado = 'Administrador Comercial'), (SELECT cli.ID_cliente FROM cliente cli WHERE cli.nombre = 'Metalúrgica del Perú'), 'IS0010');
+    ('RT0100', 'Aceptado', (SELECT e.ID_empleado FROM empleado e WHERE e.tipo_empleado = 'Administrador Comercial'), (SELECT inv.ID_invitacion FROM invitacion inv LEFT JOIN cliente cli ON inv.ID_cliente = cli.ID_cliente WHERE cli.nombre = 'Metalúrgica del Perú' AND inv.Estado_Invitacion = 'No revisado'), 'IS0010');
 
 INSERT INTO Revision_tecnica (
     ID_revision_tecnica, 
@@ -65,7 +65,7 @@ INSERT INTO Revision_tecnica (
     ID_informe_stock
 ) 
 VALUES 
-    ('RT0101', 'Rechazado', (SELECT e.ID_empleado FROM empleado e WHERE e.tipo_empleado = 'Administrador Comercial'), (SELECT cli.ID_cliente FROM cliente cli WHERE cli.nombre = 'Metalúrgica del Perú'), 'IS0010');
+    ('RT0101', 'Rechazado', (SELECT e.ID_empleado FROM empleado e WHERE e.tipo_empleado = 'Administrador Comercial'), (SELECT inv.ID_invitacion FROM invitacion inv LEFT JOIN cliente cli ON inv.ID_cliente = cli.ID_cliente WHERE cli.nombre = 'Metalúrgica del Perú' AND inv.Estado_Invitacion = 'No revisado'), 'IS0010');
 
 UPDATE Invitacion
 SET Estado_Invitacion = 'Revisado'
