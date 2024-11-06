@@ -12,7 +12,7 @@
 
 ``` sql
 INSERT INTO Invitacion (ID_invitacion, Asunto_Invitacion, Requerimientos_Invitacion, Fecha_Envio, Tiempo_Maximo, Bases_Cotizacion, Direccion_Proyecto, Comentarios, Estado_Invitacion, ID_cliente) values 
-('IV0100', 'Modernización de sistemas de bombeo', 'Modernización y automatización de sistemas de bombeo en planta de tratamiento.', CURRENT_DATE, 250, 'Cotización para modernización de sistemas de bombeo, incluyendo sensores de control.', 'Calle Agua 567, Arequipa, Perú', 'Coordinación con el equipo de operación es necesaria.', 'Revisado', 'CL0006');
+('IV0100', 'Modernización de sistemas de bombeo', 'Modernización y automatización de sistemas de bombeo en planta de tratamiento.', CURRENT_DATE, 250, 'Cotización para modernización de sistemas de bombeo, incluyendo sensores de control.', 'Calle Agua 567, Arequipa, Perú', 'Coordinación con el equipo de operación es necesaria.', 'No revisado', 'CL0006');
 
 SELECT 
     cli.Nombre AS Nombre_Cliente
