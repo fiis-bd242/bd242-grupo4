@@ -41,7 +41,8 @@
   - [8.1. Sentencias SQL por módulo / prototipo](./8/8.1/8.1.md)
   - [8.2. Alcance del Piloto (Funcionalidad primaria por módulo)](./8/8.2/8.2.md)
   - [8.3. Stack Tecnológico Elegido](./8/8.3/8.3.md)
-- [9. Objetos de Base de Datos](./9/9.md)
+- [9. Objetos de 
+Base de Datos](./9/9.md)
   - [9.1. Índices](./9/9.1/9.1.md)
   - [9.2. Vistas](./9/9.2/9.2.md)
   - [9.3. Secuencias](./9/9.3/9.3.md)
